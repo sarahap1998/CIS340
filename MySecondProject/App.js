@@ -1,19 +1,22 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import  {Text, TextInput, View} from 'react-native';
 
-export default function App() {
+function Myapp() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View>
+    <Text>Hello, I am a student in CIS340!</Text>
     </View>
   );
 }
+export default function MultiComp() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>Welcome to My Class</Text>
+      <MyApp />
+      <MyApp />
+      <MyApp />
+      <MyApp />
+      </View>
+  );
+}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
